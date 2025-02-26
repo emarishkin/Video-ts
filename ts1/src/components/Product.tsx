@@ -21,7 +21,7 @@ export function Product(props:ProductProps){
             Click
           </button>
           
-          {prrice && <span>{props.product.price}</span>}
+          {prrice && <span style={{fontSize:'22px',fontWeight:'700'}}>{props.product.price}</span>}
   
           <button onClick={()=>setPrrice(false)}>
             close

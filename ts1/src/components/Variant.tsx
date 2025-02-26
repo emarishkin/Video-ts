@@ -20,7 +20,7 @@ export function Variant(props:VariantProops){
             {ditails ? 'close diteils' : 'open diteils'}
           </button>
 
-          {ditails && <p>{props.variant.price}</p>}
+          {ditails && <p style={{fontWeight: 'bold'}}>{props.variant.price}</p>}
         </div>
     )
 }
