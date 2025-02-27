@@ -3,7 +3,10 @@ body{
   position: relative;
 }
 
-
+img{
+width: 100px;
+height: 100px;
+}
 
 .header{
   background-color: aqua;
@@ -32,7 +35,7 @@ body{
   border: 2px solid #000;
   text-align: center;
   width: 265px;
-  height: 120px;
+  height: 220px;
   
 }
 
