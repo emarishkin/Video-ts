@@ -1,16 +1,16 @@
-import { useState } from "react"
+// import { useState } from "react"
 
-export function ModalWindow(){
+// export function ModalWindow(){
 
-const [del,setDel]= useState(false)
+// const [del,setDel]= useState(false)
 
-    return(
-        <div className="modalWindow">
-         <button onClick={()=>setDel(true)}>close</button>
-         {!del && <>1</>}
-         {del && <p>rrr</p>}
-        </div>
+//     return(
+//         <div className="modalWindow">
+//          <button onClick={()=>setDel(true)}>close</button>
+//          {!del && <>1</>}
+//          {del && <p>rrr</p>}
+//         </div>
 
        
-    )
-}
+//     )
+// }

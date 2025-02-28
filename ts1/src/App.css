@@ -50,4 +50,21 @@ height: 100px;
   margin-right: 2200px;
   opacity: 1;
 }
-
+.modal1{
+  position: fixed;
+  background-color: rgb(139, 139, 139);
+  top: 0;left: 0;right: 0;bottom: 0;
+  z-index: -1;
+}
+.modal11{
+  position: absolute;
+  background-color: aliceblue;
+  width: 700px;
+  height: 400px;
+  left: 500px;
+  top: 600px;
+  
+}
+.button{
+  background-color: yellow;
+}

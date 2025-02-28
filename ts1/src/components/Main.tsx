@@ -2,10 +2,10 @@ import { Product } from "./Product";
 import { products } from "../data/products";
 import { Variant } from "./Variant";
 import { variants } from "../data/variants";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { IProduct } from "../models";
-import { ModalWindow } from "./ModalWindow";
+
+import { Modal } from "./Modal";
+import { CreateProducts } from "./CreateProduct";
+// import { ModalWindow } from "./ModalWindow";
 
 
 
@@ -29,8 +29,12 @@ export function Main(){
         <div className="main">
            {products.map(product=><Product product={product} key={product.id} />)}
            {variants.map(variant=><Variant variant={variant} key={variant.id}/>)}
+
            <div>
-            <ModalWindow/>
+            {/* <ModalWindow/> */}
+            <Modal>
+            <CreateProducts/>
+            </Modal>
            </div>
            {/* <Product product={products[0]} />
            <Product product={products[1]} />
