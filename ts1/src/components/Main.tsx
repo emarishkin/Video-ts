@@ -5,6 +5,7 @@ import { variants } from "../data/variants";
 
 import { Modal } from "./Modal";
 import { CreateProducts } from "./CreateProduct";
+import { useState } from "react";
 // import { ModalWindow } from "./ModalWindow";
 
 
@@ -24,7 +25,7 @@ export function Main(){
 //     fetchProducts()
 // },[])
 
-
+const [modal,setModal] = useState(true)
     return(
         <div className="main">
            {products.map(product=><Product product={product} key={product.id} />)}
@@ -32,9 +33,9 @@ export function Main(){
 
            <div>
             {/* <ModalWindow/> */}
-            <Modal>
-            <CreateProducts/>
-            </Modal>
+            {modal && <Modal>
+            <CreateProducts onCreate={()=>setModal(false)}/>
+            </Modal>}
            </div>
            {/* <Product product={products[0]} />
            <Product product={products[1]} />

@@ -11,13 +11,11 @@ const productData:IProduct = {
     description:'r'
   }
 
+  interface createProductProops{
+    onCreate:()=>void
+  }
 
-
-
-
-
-
-export function CreateProducts(){
+export function CreateProducts({onCreate}:createProductProops){
 
 const [value,setValue]= useState('')
 
@@ -28,6 +26,8 @@ const submitHandler = async (event:React.FormEvent)=>{
 productData.title= value
 
   await axios.post<IProduct>('https://fakestoreapi.in/api/products',productData)
+
+  onCreate()
 }
 
 // const changeHandle = (event:React.KeyboardEvent<HTMLInputElement>) => {
